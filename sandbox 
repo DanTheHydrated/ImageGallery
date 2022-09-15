@@ -1,0 +1,36 @@
+//Nothing in here works lmao
+
+
+for (images of imgs) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', imgs/image);
+    newImage.setAttribute('alt', imgalt[image]);
+    thumbBar.appendChild(newImage);
+    thumbBar.addEventListener('click', e=> {
+        displayedImage.src = e.target.imgs;
+        displayedImage.alt = e.target.imgalt;
+    })
+}
+
+
+
+for (let i=0; i<5; i++) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', 'images/${filenames[i]}');
+    newImage.setAttribute('alt', 'imgalt[image]');
+    thumbBar.appendChild(newImage);
+    thumbBar.addEventListener('click', e=> {
+        displayedImage.setAttribute('src', '${e.target.src}');
+        displayedImage.setAttribute('alt', '${e.target.alt}');
+    })
+}
+
+
+for (let i=0; i < filenames.length; i++) {
+    const newImage = document.createElement('img');
+    newImage.setAttribute('src', `images/${filenames[i]}`)
+    thumbBar.appendChild(newImage);
+    newImage.addEventListener('click', e => {
+        displayedImage.setAttribute('src', `${e.target.src}`);
+    });
+}
